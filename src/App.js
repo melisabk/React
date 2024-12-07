@@ -1,10 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import Nav from "./nav";
-import User from "./User";
-import userphoto from "./smiling-business-woman.jpg";
-import arrow from "./arrow.png";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+//import ReactDOM from "react-dom/client";
+import data from './emp.json'
+import './emp.css'
+import Nav from '../src/Content/nav'
+//import User from "./Content/Main/User";
+//import userphoto from "./smiling-business-woman.jpg";
+ 
+import EmpShow from "./Content/Admin/empshow";
+//import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 //son index 1 se admin dedim simdilik
 export default function App() {
   const userData = [
@@ -15,12 +19,18 @@ export default function App() {
     1,
   ];
   return (
-    <Router>
+    <>
+        <Nav/>
       <div>
-        <Nav></Nav>
-
+        {/* <Signin></Signin>
+        
         <User user={userData} src={userphoto} />
+        
+        */}
+        {data.employees.map((employee, index) => (
+          <EmpShow key={index} index={index} />
+        ))}
       </div>
-    </Router>
+    </>
   );
 }

@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-    background-color: #005b96; /* Deep blue for a strong professional look */
+    background-color: #123461; /* Deep blue for a strong professional look */
     position: sticky;
     color: #f0f4f8;
     top: 0;
@@ -57,15 +57,16 @@ a {
 }
 
 a:hover {
-    background-color: rgba(255, 165, 0, 0.5); /* Soft orange on hover */
+    background-color: #932a15; /* Soft orange on hover */
 }
-
 .container {
     display: flex;
-    justify-content: center; /* Center the entire content */
-    align-items: flex-start; /* Align items to the top */
-    padding: 2em; /* Add padding for spacing */
+    justify-content: center; /* Div'leri yatayda ortalar */
+    align-items: center; /* Div'leri dikeyde ortalar */
+    flex-wrap: wrap; /* Yeni div'ler alt satıra geçebilir */
+    padding: 2em; /* Padding ekliyoruz */
 }
+
 
 .userdiv {
 
@@ -108,7 +109,9 @@ h4 {
     font-weight: 600; /* Slightly bolder for visibility */
     text-align: center; /* Center text */
 }
-
+h5 {color:#ffffff;
+    font-weight: 450; /* Slightly bolder for visibility */
+    text-align: center}
 p {
     font-weight: 500;
     padding: 0.5em; /* Reduced padding for compactness */
