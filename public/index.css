@@ -61,26 +61,27 @@ a:hover {
 }
 .container {
     display: flex;
+    flex-direction: row;
     justify-content: center; /* Div'leri yatayda ortalar */
     align-items: center; /* Div'leri dikeyde ortalar */
     flex-wrap: wrap; /* Yeni div'ler alt satıra geçebilir */
-    padding: 2em; /* Padding ekliyoruz */
+    gap: 20px; /* Divler arasında boşluk */
+    padding: 2em;
 }
-
 
 .userdiv {
-
-    background-color: #ffffff; /* Very light blue for the user div */
+    background-color: #ffffff;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    width: 700px; /* Fixed width for user box */
+    flex-direction: column;
+    flex: 1 1 300px; /* Esneklik: Min 300px genişlik, fazla alanda büyüyebilir */
+    max-width: 300px; /* Maksimum genişlik sınırı */
     border-radius: 15px;
-    padding: 2em 1em; /* Increased padding for spaciousness */
-    margin: auto;/* Margin for separation */
-    margin-top: 20px;
+    padding: 2em 1em;
+    margin: 10px; /* Daha net ayrım için margin */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    align-items: center; /* Center contents */
+    align-items: center; /* İçerikleri ortala */
 }
+
 
 .circular-image {
     width: 200px; /* Reduced size for better layout */
@@ -117,3 +118,4 @@ p {
     padding: 0.5em; /* Reduced padding for compactness */
     text-align: center; /* Centered text */
 }
+

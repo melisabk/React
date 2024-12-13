@@ -1,21 +1,24 @@
 /* EmpShow.css */
 
 /* Genel stil ayarları */
+/* Genel stil ayarları */
+/* Genel stil ayarları */
 .container {
-  display: flex;
-  justify-content: center; /* Divleri yatayda ortalar */
-  align-items: center; /* Divleri dikeyde ortalar */
+  display: inline-block; /* Flexbox düzenini etkinleştir. Burası flexdi yatayda dursunlar diye inline yaptım */
+  justify-content: flex-start; /* Divleri sola hizalar */
+  align-items: flex-start; /* Divleri yukarı hizalar */
+  flex-wrap: wrap; /* Eğer çok fazla div varsa alt satıra geçmelerine izin verir */
   gap: 20px; /* Divler arasındaki boşluk */
   padding: 20px;
-  flex-direction: row;
-  background-color: white; /* Arka planı beyaz yapıyoruz */ /* Divlerin alt alta inmesini engeller */
-  overflow-x: auto; /* Eğer çok fazla div varsa yatay kaydırma ekler */
+  overflow: hidden; /* Taşmaları gizle */
+  background-color: white; /* Arka planı beyaz */
+  flex-direction: row; /* Divleri yatay eksende sıralar */
 }
 
 /* Her bir employee div'inin stilini ayarlıyoruz */
 .emp-card {
-  width: 250px; /* Karemsi görünüm için genişlik */
-  height: 350px; /* Karemsi görünüm için yükseklik */
+  width: 250px; /* Sabit genişlik */
+  height: 350px; /* Sabit yükseklik */
   background-color: #123461; /* Arka plan rengi */
   border-radius: 10px; /* Köşeleri yuvarlatıyoruz */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
@@ -24,20 +27,24 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: transform 0.2s ease-in-out; /* Hover efekti için geçiş */
+  position: relative; /* Kartın referans noktası */
+  transition: transform 0.2s ease-in-out;
 }
 
 .emp-card:hover {
-  transform: scale(1.05); /* Hover ile biraz büyür */
+  transform: scale(1.05); /* Kart büyür */
+  z-index: 10; /* Öne çıkar */
 }
 
+
 /* Başlık ve içerik yazıları */
- h4,h5 {
+h4, h5 {
   margin: 5px 0;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   color: #f1eeee;
 }
+
 
 
 /* Delete butonunun stilini ayarlıyoruz */
