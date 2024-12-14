@@ -1,0 +1,65 @@
+/* EmpShow.css */
+
+/* Genel stil ayarları */
+.container {
+  display: flex;
+  justify-content: center; /* Divleri yatayda ortalar */
+  align-items: center; /* Divleri dikeyde ortalar */
+  gap: 20px; /* Divler arasındaki boşluk */
+  padding: 20px;
+  flex-direction: row;
+  background-color: white; /* Arka planı beyaz yapıyoruz */ /* Divlerin alt alta inmesini engeller */
+  overflow-x: auto; /* Eğer çok fazla div varsa yatay kaydırma ekler */
+}
+
+/* Her bir employee div'inin stilini ayarlıyoruz */
+.emp-card {
+  width: 250px; /* Karemsi görünüm için genişlik */
+  height: 350px; /* Karemsi görünüm için yükseklik */
+  background-color: #123461; /* Arka plan rengi */
+  border-radius: 10px; /* Köşeleri yuvarlatıyoruz */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease-in-out; /* Hover efekti için geçiş */
+}
+
+.emp-card:hover {
+  transform: scale(1.05); /* Hover ile biraz büyür */
+}
+
+/* Başlık ve içerik yazıları */
+ h4,h5 {
+  margin: 5px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+
+/* Delete butonunun stilini ayarlıyoruz */
+button {
+  width: 100px;
+  height: 35px;
+  background-color: #82220f; /* Koyu lacivert buton rengi */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 5px; /* Butonlar arasındaki mesafeyi ayarlıyoruz */
+}
+
+button:hover {
+  background-color: #c7621a; /* Hover ile butonun rengi değişiyor */
+}
+
+/* Eğer butonlar yatayda hizalanacaksa, container içerisindeki butonları satırda göstermek için */
+.emp-card button {
+  display: inline-block;
+  margin: 5px; /* Butonlar arasındaki mesafeyi ayarlıyoruz */
+}

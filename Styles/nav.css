@@ -1,0 +1,100 @@
+/* Genel Nav Stil */
+nav {
+    position: fixed; /* Sabit tutar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #123461;
+    z-index: 1000; /* Diğer öğelerin önünde görünmesini sağlar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+    padding: 10px 10px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between; /* WorkTrack en solda, Settings en sağda */
+    align-items: center;
+}
+  
+/* Nav içindeki listeyi düzenle */
+nav ul {
+    display: flex;
+    justify-content: flex-start; /* Öğeleri sola hizala */
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Menü genişliğini tam olarak almasını sağlar */
+}
+  
+/* WorkTrack'i en sola hizala */
+nav .worktrack {
+    margin-right: auto; /* Diğer öğelerle arasındaki boşluğu açar */
+}
+  
+/* Her bir liste elemanını düzenle */
+nav li {
+    margin: 0 10px; /* Öğeler arasında yatay boşluk bırak */
+    position: relative; /* Settings menüsünün pozisyonunu düzgün ayarlamak için */
+}
+  
+/* Linklerin stilini belirle */
+nav a {
+    text-decoration: none; /* Alt çizgi olmamalı */
+    color: #fff; /* Beyaz renk */
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: block;
+}
+  
+/* Linklere hover efekti */
+nav a:hover {
+    background-color: #123461; /* Hover sırasında mavi arkaplan */
+    color: #fff; /* Hover sırasında metin rengi beyaz */
+}
+  
+/* Settings dropdown menüsü */
+nav .settings {
+    position: relative; /* Dropdown menü için relative konumlandırma */
+    cursor: pointer; /* Hoverda işaretçi el simgesi */
+    margin-right: 10px; /* Sağ tarafta biraz daha boşluk bırak */
+    width: 150px; /* Settings'in genişliği burada belirlendi */
+}
+  
+nav .dropdown {
+    display: none; /* Başlangıçta gizle */
+   
+}
+  
+/* Dropdown menüsündeki öğeler */
+nav .dropdown li {
+    margin: 0;
+    padding: 12px 10px; /* Daha büyük öğe boyutu */
+    font-size: 16px; /* Yazı boyutunu büyüt */
+    min-width: 250px; /* Genişlik ayarını tam yap */
+    box-sizing: border-box; /* Padding'le birlikte öğe boyutunu düzgün ayarla */
+    display: block; /* Her öğe kendi satırında olacak şekilde ayarla */
+}
+  
+/* Hover efekti için border-radius ekleyelim */
+nav .dropdown li:hover {
+    background-color: #007bff; /* Hoverda mavi arkaplan */
+    font-weight: bold; /* Yazı kalınlaşır */
+    color: #fff; /* Yazı rengi beyaz olur */
+}
+  
+/* Settings kısmı hoverda dropdown menüsünü gösterir */
+nav .settings:hover .dropdown {
+    display: block; /* Hover sırasında dropdown menüsünü göster */
+}
+
+/* Mobile cihazlar için responsive tasarım */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Mobilde dikey sıralama */
+        align-items: flex-start; /* Sol tarafta hizalama */
+    }
+  
+    nav a {
+        padding: 10px 20px; /* Mobilde daha büyük padding */
+    }
+}
