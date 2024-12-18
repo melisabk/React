@@ -7,6 +7,8 @@ import EmpShow from "./Components/empshow.js"; // EmpShow bileşenini import edi
 import Signin from "./Components/Signin.js"; // Signin bileşenini import ediyoruz
 import Signup from "./Components/Signup.js"; // Signup bileşenini import ediyoruz
 import User from "./Components/User.js"; // User bileşenini import ediyoruz
+import MyBigCalendar from "./Components/MyCalender.js";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
 export default function App() {
   return (
@@ -32,6 +34,17 @@ export default function App() {
                 <Nav />
 
                 <EmpShow index={0} />
+                <EmpShow index={1} />
+              </div>
+            }
+          />
+          <Route
+            path="/calendar"
+            element={
+              <div>
+                <Nav />
+
+                <MyBigCalendar />
               </div>
             }
           />
